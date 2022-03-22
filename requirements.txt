@@ -1,4 +1,5 @@
+Flask>=2.0.3
+graphene==3.0.0
+py2neo
+graphql-server
 environs
-graphene==3.0
-py2neo==4.3
-# Flask-GraphQL==2.0.1 TODO - this dependency breaks nix-shell

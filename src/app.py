@@ -1,11 +1,14 @@
+import settings
 from flask import Flask
-from flask_graphql import GraphQLView
+from graphql_server.flask import GraphQLView
+
 
 from schema import schema
 
 app = Flask(__name__)
 app.debug = True
 
+# TODO issue 61 block - https://github.com/lmcgartland/graphene-file-upload/pull/61
 app.add_url_rule(
     '/graphql',
     view_func=GraphQLView.as_view(
@@ -16,4 +19,4 @@ app.add_url_rule(
 )
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=settings.BIND_HOST,port=settings.BIND_PORT)
