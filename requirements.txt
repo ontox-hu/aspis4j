@@ -1,5 +1,5 @@
-Flask>=2.0.3
 graphene==3.0.0
+Flask
 py2neo
 graphql-server
 environs

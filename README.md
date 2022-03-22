@@ -1,7 +1,17 @@
 # ontox4j
 
+## Documentation
+
+src/
+* **app.py** runs the flask app with graphiql for browser
+* **settings.py** env for flask and neo4j (ask for vars.sh)
+* **neo4j_store.py**: neo4j node/edge CRUD
+* **schema.py**: graphene graphql schema
+
 ## Dev
-You need a vars.sh to set environmental variables. Ask Tom.
+```diff
+- Get vars.sh from Tom.
+```
 
 Start a virtual environment
 ```sh
@@ -14,3 +24,6 @@ Or use this nix shell
 ```sh
 nix-shell # dep issues see ./shell.nix
 ```
+
+## Roadmap
+1. Get the graphiql server working 
