@@ -30,3 +30,4 @@ nix-shell # dep issues see ./shell.nix
 2. Add ctdbase.org entities (compounds, proteins, etc.)
 3. Add ctdbase.org entity relationships
 4. Add entity CRUD to graphql schema
+5. ETL a pub db (ctdbase, chembl) into ontox4j
