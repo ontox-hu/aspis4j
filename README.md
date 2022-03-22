@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 Or use this nix shell
 ```sh
-nix-shell # dep issues see ./shell.nix
+nix-shell
 ```
 
 ## Roadmap
