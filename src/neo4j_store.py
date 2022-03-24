@@ -1,3 +1,4 @@
+from unicodedata import name
 from py2neo.ogm import Graph, GraphObject, Property, RelatedTo
 from settings import NEO4J_HOST,NEO4J_PASSWORD,NEO4J_PORT,NEO4J_USER
 
@@ -13,13 +14,34 @@ graph = Graph(
     scheme   = "neo4j+s"
 )
 
-class Protein(GraphObject):
+class BaseModel(GraphObject):
+    """
+    Implements some basic functions to guarantee some standard functionality
+    across all models. The main purpose here is also to compensate for some
+    missing basic features that we expected from GraphObjects, and improve the
+    way we interact with them.
+    """
+
+    def __init__(self, **kwargs):
+        for key, value in kwargs.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
+
+    @property
+    def all(self):
+        return self.match(graph)
+
+    def save(self):
+        graph.push(self)
+
+class Protein(BaseModel):
     __primarykey__ = 'uniprot'
 
-
-class Compound(GraphObject):
-    __primarykey__ = 'inchi'
-    inchi          = Property()
+class Compound(BaseModel):
+    #__primarykey__  = 'id'
+    #id = Property()
+    pubchem_cid = Property()
+    name = Property()
     # compounds have lots of properties, do we have to define them all up front?
     # maybe just passing a reference to pubchem is enough?
 
@@ -28,5 +50,12 @@ class Compound(GraphObject):
     is_converted = RelatedTo('Compound','is_converted_to')
     translocated_from = RelatedTo('Compound','translocated_from')
 
-    def fetch(self):
-        return self.match(graph,self.inchi).first()
+    def fetch(self, _id):
+        return self.match(graph, _id).first()
+
+    def as_dict(self):
+        return {
+            'id': self.__primaryvalue__,
+            'pubchem_cid': self.pubchem_cid,
+            'name': self.name
+        }
