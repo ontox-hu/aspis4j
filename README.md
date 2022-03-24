@@ -24,6 +24,42 @@ Or use this nix shell
 ```sh
 nix-shell
 ```
+## Usage
+
+Start the server:
+
+```sh
+source vars.sh
+python /src/app.py
+```
+
+Open a in a browser the graphiql interface at http://127.0.0.1:5000/graphql
+
+Example query to read an entity:
+
+```json
+{
+  compound(Id: "3") {
+    id
+    pubchemCid
+    name
+  }
+}
+```
+
+Example query to write an entity:
+
+```json
+mutation {
+  createCompound(name: "Amoxaciline", pubchemCid: "313233") {
+    compound {
+      name, pubchemCid
+    },
+    success
+  }
+}
+```
+
 
 ## Roadmap
 1. Get the graphiql server working 
