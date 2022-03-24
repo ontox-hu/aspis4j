@@ -37,7 +37,7 @@ Open a in a browser the graphiql interface at http://127.0.0.1:5000/graphql
 
 Example query to read an entity:
 
-```json
+```graphql
 {
   compound(Id: "3") {
     id
@@ -49,7 +49,7 @@ Example query to read an entity:
 
 Example query to write an entity:
 
-```json
+```graphql
 mutation {
   createCompound(name: "Amoxaciline", pubchemCid: "313233") {
     compound {
