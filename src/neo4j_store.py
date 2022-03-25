@@ -34,6 +34,31 @@ class BaseModel(GraphObject):
     def save(self):
         graph.push(self)
 
+    def delete(self):
+        graph.delete(self)
+
+class Chemical(BaseModel):
+    __primarykey__  = 'ChemicalID'
+    ChemicalID = Property()     # MeSH Identifier
+    ChemicalName = Property()   # CAS Registry Number
+    CasRN = Property()
+
+    def fetch(self, _id):
+        return self.match(graph, _id).first()
+
+    def fetch_by_ChemicalID(self, ChemicalID):
+        return Chemical.match(graph).where(
+            f'_.ChemicalID = "{ChemicalID}"'
+        ).first()
+
+    def as_dict(self):
+        return {
+            #'id': self.__primaryvalue__,
+            'ChemicalID': self.ChemicalID,
+            'ChemicalName': self.ChemicalName,
+            'CasRN': self.CasRN
+        }
+
 class Protein(BaseModel):
     __primarykey__ = 'uniprot'
 

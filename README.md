@@ -1,12 +1,12 @@
-# ontox4j
+# Ontox4j
 
 ## Documentation
 
 src/
-* **app.py** runs the flask app with graphiql for browser
-* **settings.py** env for flask and neo4j (ask for vars.sh)
-* **neo4j_store.py**: neo4j node/edge CRUD
-* **schema.py**: graphene graphql schema
+* **app.py** runs the Flask app with GraphiQL for browser
+* **settings.py** env for Flask and Neo4j (ask for vars.sh)
+* **neo4j_store.py**: Neo4j node/edge CRUD
+* **schema.py**: Graphene GraphQL schema
 
 ## Dev
 ```diff
@@ -15,8 +15,8 @@ src/
 
 Start a virtual environment
 ```sh
-python3.6 -m virtualenv env
-source env/bin/activate
+conda create --name ontox4j python=3.8
+conda activate ontox4j
 pip install -r requirements.txt
 ```
 
@@ -33,7 +33,7 @@ source vars.sh
 python /src/app.py
 ```
 
-Open a in a browser the graphiql interface at http://127.0.0.1:5000/graphql
+Open a in a browser the GraphiQL interface at http://127.0.0.1:5000/graphql
 
 Example query to read an entity:
 
@@ -62,8 +62,12 @@ mutation {
 
 
 ## Roadmap
-1. Get the graphiql server working 
-2. Add ctdbase.org entities (compounds, proteins, etc.)
-3. Add ctdbase.org entity relationships
-4. Add entity CRUD to graphql schema
-5. ETL a pub db (ctdbase, chembl) into ontox4j
+1. [x] Get the Neo4j server with GraphiQL working 
+2. [ ] Add CTD (Comparative Toxicogenomics Database) entities
+   1.  Chemical
+   2.  Gene
+   3.  Disease
+   4.  Pathway
+3. [ ] Add CDT entity relationships
+4. [ ] Add entity CRUD to graphql schema
+5. [ ] ETL a pub db (ctdbase, chembl) into ontox4j

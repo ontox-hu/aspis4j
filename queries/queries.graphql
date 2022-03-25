@@ -1,0 +1,53 @@
+mutation {
+  createCompound(name: "Amoxaciline", pubchemCid: "313233") {
+    compound {
+      name, pubchemCid
+    },
+    success
+  }
+}
+
+{
+  compound(Id: "3") {
+    id
+    pubchemCid
+    name
+  }
+}
+
+mutation {
+  createChemical(ChemicalName: "Acetaminophen", ChemicalID: "D000082", CasRN: "103-90-2") {
+    chemical {
+      ChemicalName
+      ChemicalID
+      CasRN
+    }
+    success
+  }
+}
+
+mutation {
+  createChemical(ChemicalName: "Ibuprofen", ChemicalID: "D007052", CasRN: "15687-27-1") {
+    chemical {
+      ChemicalName
+      ChemicalID
+      CasRN
+    }
+    success
+  }
+}
+
+{
+  chemical(ChemicalID: "D007052") {
+    ChemicalName
+    ChemicalID
+    CasRN
+  }
+}
+
+mutation {
+  deleteChemical(ChemicalID: "D007052") {
+    success
+  }
+}
+
