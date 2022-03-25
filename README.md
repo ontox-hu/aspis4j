@@ -62,12 +62,20 @@ mutation {
 
 
 ## Roadmap
-1. [x] Get the Neo4j server with GraphiQL working 
-2. [ ] Add CTD (Comparative Toxicogenomics Database) entities
-   1.  Chemical
-   2.  Gene
-   3.  Disease
-   4.  Pathway
-3. [ ] Add CDT entity relationships
-4. [ ] Add entity CRUD to graphql schema
-5. [ ] ETL a pub db (ctdbase, chembl) into ontox4j
+1. Get the Neo4j server with GraphiQL working 
+2. CDT Chemical Entity
+    * CRUD
+    * Documentation
+    * ETL
+3. CDT Gene Entity
+4. CDT Chemical Gene Interaction
+5. Graph Visualization
+6. CDT Disease Entity
+7. CDT Chemical Disease Association
+8. CDT Gene Disease Association
+9. Graph Visualization
+10. CDT Pathway Entity
+11. CDT Chemical Pathway Association
+12. CDT Gene Pathway Association
+13. CDT Disease Pathway Association
+14. Graph Visualization
