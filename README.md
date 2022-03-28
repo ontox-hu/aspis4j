@@ -59,11 +59,14 @@ mutation {
   }
 }
 ```
+## Troubleshooting
 
+Error message "Cannot connect to any known routers" is related with a Neo4j DB Authentication problem, check your access credentials. 
 
 ## Roadmap
 1. Get the Neo4j server with GraphiQL working 
 2. CDT Chemical Entity
+    * Model
     * CRUD
     * Documentation
     * ETL
@@ -73,7 +76,7 @@ mutation {
 6. CDT Disease Entity
 7. CDT Chemical Disease Association
 8. CDT Gene Disease Association
-9. Graph Visualization
+9.  Graph Visualization
 10. CDT Pathway Entity
 11. CDT Chemical Pathway Association
 12. CDT Gene Pathway Association
