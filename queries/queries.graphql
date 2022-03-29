@@ -51,3 +51,19 @@ mutation {
   }
 }
 
+mutation {
+  createGene(GeneID: "596", GeneName: "BCL2 apoptosis regulator", GeneSymbol: "BCL2") {
+    gene {
+      GeneID
+      GeneSymbol
+    }
+    success
+  }
+}
+
+{
+  gene(GeneID: "596") {
+    GeneName
+    GeneSymbol
+  }
+}

@@ -38,6 +38,11 @@ class BaseModel(GraphObject):
         graph.delete(self)
 
 class Chemical(BaseModel):
+    """
+    Chemical Class using CTD Model with properties ChemicalID, 
+    ChemicalName and CasRN.
+    """
+
     __primarykey__  = 'ChemicalID'
     ChemicalID = Property()     # MeSH Identifier
     ChemicalName = Property()   # CAS Registry Number
@@ -55,12 +60,21 @@ class Chemical(BaseModel):
         }
 
 class Gene(BaseModel):
+    """
+    Gene Class using CTD Model with properties GeneID, 
+    GeneSymbol, GeneName and Alternative IDs
+    """
+
     __primarykey__  = 'GeneID'
-    GeneID = Property()     # NCBI Gene identifier
-    GeneSymbol = Property() # CAS Registry Number
-    GeneForm = Property()   # Protein, 3' UTR, mRNA, alternative form, enhancer, exon, gene, intron, modified form, mutant form, polyA tail, polymorphism, SNP
-    Organism = Property()   # Scientific Name
-    OrganismID = Property() # NCBI Taxonomy identifier
+    GeneID = Property()      # NCBI Gene identifier
+    GeneSymbol = Property()  # CAS Registry Number
+    GeneName = Property()   
+    AltGeneIDs = Property()  # alternative NCBI Gene identifiers; '|'-delimited list  
+    # TODO: Delimited lists currently in a single string should be replaced by a list structure
+    Synonyms = Property()    # '|'-delimited list  
+    BioGRIDIDs = Property()  # '|'-delimited list  
+    PharmGKBIDs = Property() # '|'-delimited list  
+    UniprotIDs = Property()  # '|'-delimited list  
 
     def fetch(self, GeneID):
         return self.match(graph, GeneID).first()
@@ -69,9 +83,11 @@ class Gene(BaseModel):
         return {
             'GeneID': self.GeneID,
             'GeneSymbol': self.GeneSymbol,
-            'GeneForm': self.GeneForm,
-            'Organism': self.Organism,
-            'OrganismID': self.OrganismID
+            'GeneName': self.GeneName,
+            'Synonyms': self.Synonyms,
+            'BioGRIDIDs': self.BioGRIDIDs,
+            'PharmGKBIDs': self.PharmGKBIDs,
+            'UniprotIDs': self.UniprotIDs
         }
 
 class Protein(BaseModel):
