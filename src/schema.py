@@ -1,6 +1,9 @@
 import graphene
-from neo4j_store import Chemical
+from neo4j_store import Chemical, Gene
 from neo4j_store import Compound
+
+##################################################################
+## Chemical Schema
 
 class ChemicalSchema(graphene.ObjectType):
     ChemicalID = graphene.String()
@@ -32,6 +35,46 @@ class DeleteChemical(graphene.Mutation):
         chemical = Chemical(ChemicalID=ChemicalID).fetch(ChemicalID)
         chemical.delete()
         return DeleteChemical(success=True)
+
+##################################################################
+## Gene Schema
+
+class GeneSchema(graphene.ObjectType):
+    GeneID = graphene.String()
+    GeneSymbol = graphene.String()
+    GeneForm = graphene.String()
+    Organism = graphene.String()
+    OrganismID = graphene.String()
+
+class CreateGene(graphene.Mutation):
+    class Arguments:
+        GeneID = graphene.String(required=True)
+        GeneSymbol = graphene.String(required=True)
+        GeneForm = graphene.String(required=True)
+        Organism = graphene.String(required=True)
+        OrganismID = graphene.String(required=False)
+
+    success = graphene.Boolean()
+    gene = graphene.Field(lambda: GeneSchema)
+
+    def mutate(self, info, **kwargs):
+        gene = Gene(**kwargs)
+        gene.save()
+        return CreateChemical(gene=gene, success=True)
+
+class DeleteGene(graphene.Mutation):
+    class Arguments:
+        GeneID = graphene.String(required=True)
+
+    success = graphene.Boolean()
+    gene = graphene.Field(lambda: GeneSchema)
+
+    def mutate(self, info, GeneID):
+        gene = Gene(GeneID=GeneID).fetch(GeneID)
+        gene.delete()
+        return DeleteGene(success=True)
+
+##################################################################
 
 class CompoundSchema(graphene.ObjectType):
     id = graphene.Int()

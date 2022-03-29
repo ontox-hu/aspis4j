@@ -43,13 +43,8 @@ class Chemical(BaseModel):
     ChemicalName = Property()   # CAS Registry Number
     CasRN = Property()
 
-    def fetch(self, _id):
-        return self.match(graph, _id).first()
-
-    def fetch_by_ChemicalID(self, ChemicalID):
-        return Chemical.match(graph).where(
-            f'_.ChemicalID = "{ChemicalID}"'
-        ).first()
+    def fetch(self, ChemicalID):
+        return self.match(graph, ChemicalID).first()
 
     def as_dict(self):
         return {
@@ -57,6 +52,26 @@ class Chemical(BaseModel):
             'ChemicalID': self.ChemicalID,
             'ChemicalName': self.ChemicalName,
             'CasRN': self.CasRN
+        }
+
+class Gene(BaseModel):
+    __primarykey__  = 'GeneID'
+    GeneID = Property()     # NCBI Gene identifier
+    GeneSymbol = Property() # CAS Registry Number
+    GeneForm = Property()   # Protein, 3' UTR, mRNA, alternative form, enhancer, exon, gene, intron, modified form, mutant form, polyA tail, polymorphism, SNP
+    Organism = Property()   # Scientific Name
+    OrganismID = Property() # NCBI Taxonomy identifier
+
+    def fetch(self, GeneID):
+        return self.match(graph, GeneID).first()
+
+    def as_dict(self):
+        return {
+            'GeneID': self.GeneID,
+            'GeneSymbol': self.GeneSymbol,
+            'GeneForm': self.GeneForm,
+            'Organism': self.Organism,
+            'OrganismID': self.OrganismID
         }
 
 class Protein(BaseModel):

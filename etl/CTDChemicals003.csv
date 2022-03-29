@@ -1,0 +1,32 @@
+# The Comparative Toxicogenomics Database (CTD) - http://ctdbase.org/
+#   Copyright 2002-2012 MDI Biological Laboratory. All rights reserved.
+#   Copyright 2012-2022 NC State University. All rights reserved.
+#  
+# 
+# Use is subject to the terms set forth at http://ctdbase.org/about/legal.jsp
+# These terms include:
+# 
+#   1. All forms of publication (e.g., web sites, research papers, databases,
+#      software applications, etc.) that use or rely on CTD data must cite CTD.
+#      Citation guidelines: http://ctdbase.org/about/publications/#citing
+# 
+#   2. All electronic or online applications must include hyperlinks from 
+#      contexts that use CTD data to the applicable CTD data pages.
+#      Linking instructions: http://ctdbase.org/help/linking.jsp
+# 
+#   3. You must notify CTD, and describe your use of our data:
+#      http://ctdbase.org/help/contact.go
+# 
+#   4. For quality control purposes, you must provide CTD with periodic 
+#      access to your publication of our data.
+# 
+# More information: http://ctdbase.org/downloads/
+# 
+# Report created: Tue Mar 01 11:43:36 EST 2022
+#
+# Fields:
+# ChemicalName,ChemicalID,CasRN,Definition,ParentIDs,TreeNumbers,ParentTreeNumbers,Synonyms
+#
+(0.017ferrocene)amylose,MESH:C089250,,,MESH:D000075163|MESH:D000688|MESH:D005296,D01.490.200/C089250|D02.691.657/C089250|D09.301.915.361/C089250|D09.698.365.855.361/C089250,D01.490.200|D02.691.657|D09.301.915.361|D09.698.365.855.361,(0.017 ferrocene)amylose
+001-C8-NBD,MESH:C114385,,,MESH:D009842|MESH:D010069,D03.383.129.462.580/C114385|D12.644.456/C114385,D03.383.129.462.580|D12.644.456,001 C8 NBD|H-MeTyr-Arg-MeArg-D-Leu-NH(CH2)8NH-NBD|MeTyr-Arg-MeArg-Leu-NH-NBD
+"0231A , Streptomyces",MESH:C434150,,,MESH:D006576,D03.633.400/C434150,D03.633.400,

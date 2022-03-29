@@ -1,0 +1,39 @@
+# The Comparative Toxicogenomics Database (CTD) - http://ctdbase.org/
+#   Copyright 2002-2012 MDI Biological Laboratory. All rights reserved.
+#   Copyright 2012-2022 NC State University. All rights reserved.
+#  
+# 
+# Use is subject to the terms set forth at http://ctdbase.org/about/legal.jsp
+# These terms include:
+# 
+#   1. All forms of publication (e.g., web sites, research papers, databases,
+#      software applications, etc.) that use or rely on CTD data must cite CTD.
+#      Citation guidelines: http://ctdbase.org/about/publications/#citing
+# 
+#   2. All electronic or online applications must include hyperlinks from 
+#      contexts that use CTD data to the applicable CTD data pages.
+#      Linking instructions: http://ctdbase.org/help/linking.jsp
+# 
+#   3. You must notify CTD, and describe your use of our data:
+#      http://ctdbase.org/help/contact.go
+# 
+#   4. For quality control purposes, you must provide CTD with periodic 
+#      access to your publication of our data.
+# 
+# More information: http://ctdbase.org/downloads/
+# 
+# Report created: Tue Mar 01 11:43:36 EST 2022
+#
+# Fields:
+# ChemicalName,ChemicalID,CasRN,Definition,ParentIDs,TreeNumbers,ParentTreeNumbers,Synonyms
+#
+(0.017ferrocene)amylose,MESH:C089250,,,MESH:D000075163|MESH:D000688|MESH:D005296,D01.490.200/C089250|D02.691.657/C089250|D09.301.915.361/C089250|D09.698.365.855.361/C089250,D01.490.200|D02.691.657|D09.301.915.361|D09.698.365.855.361,(0.017 ferrocene)amylose
+001-C8-NBD,MESH:C114385,,,MESH:D009842|MESH:D010069,D03.383.129.462.580/C114385|D12.644.456/C114385,D03.383.129.462.580|D12.644.456,001 C8 NBD|H-MeTyr-Arg-MeArg-D-Leu-NH(CH2)8NH-NBD|MeTyr-Arg-MeArg-Leu-NH-NBD
+"0231A , Streptomyces",MESH:C434150,,,MESH:D006576,D03.633.400/C434150,D03.633.400,
+"0231B, Streptomyces",MESH:C434149,,,MESH:D006576,D03.633.400/C434149,D03.633.400,
+027075 compound,MESH:C000620092,,,MESH:D010793|MESH:D052117,D03.383.246.118/C000620092|D03.383.710.605/C000620092|D03.633.100.115/C000620092,D03.383.246.118|D03.383.710.605|D03.633.100.115,"N-(benzo(d)(1,3)dioxol-5-yl)-2-(1-oxo-4-(p-tolyl)-5,6,7,8-tetrahydrophthalazin-2(1H)-yl)butanamide"
+0433YC1,MESH:C533344,,,MESH:D006576,D03.633.400/C533344,D03.633.400,
+0433YC2,MESH:C533345,,,MESH:D006576,D03.633.400/C533345,D03.633.400,
+06-Paris-LA-66 protocol,MESH:C046983,,,MESH:D003630|MESH:D008727|MESH:D011239|MESH:D014750,D02.455.426.559.847.562.050.200/C046983|D03.132.436.681.827.817/C046983|D03.633.100.473.402.681.827.817/C046983|D03.633.100.496.500.500.681.827.817/C046983|D03.633.100.733.631.192.500/C046983|D04.210.500.745.432.769.795/C046983|D04.615.562.050.200/C046983|D09.408.051.059.200/C046983,D02.455.426.559.847.562.050.200|D03.132.436.681.827.817|D03.633.100.473.402.681.827.817|D03.633.100.496.500.500.681.827.817|D03.633.100.733.631.192.500|D04.210.500.745.432.769.795|D04.615.562.050.200|D09.408.051.059.200,Paris-LA
+071031B compound,MESH:C585814,,,MESH:D013876|MESH:D052117,D02.886.778/C585814|D03.383.246.118/C585814|D03.383.903/C585814|D03.633.100.115/C585814,D02.886.778|D03.383.246.118|D03.383.903|D03.633.100.115,
+072RB peptide,MESH:C533898,,,MESH:D010455,D12.644/C533898,D12.644,
