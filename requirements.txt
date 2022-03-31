@@ -3,3 +3,4 @@ Flask
 py2neo
 graphql-server
 environs
+neo4jupyter

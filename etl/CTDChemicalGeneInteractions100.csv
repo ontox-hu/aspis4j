@@ -1,0 +1,129 @@
+# The Comparative Toxicogenomics Database (CTD) - http://ctdbase.org/
+#   Copyright 2002-2012 MDI Biological Laboratory. All rights reserved.
+#   Copyright 2012-2022 NC State University. All rights reserved.
+#  
+# 
+# Use is subject to the terms set forth at http://ctdbase.org/about/legal.jsp
+# These terms include:
+# 
+#   1. All forms of publication (e.g., web sites, research papers, databases,
+#      software applications, etc.) that use or rely on CTD data must cite CTD.
+#      Citation guidelines: http://ctdbase.org/about/publications/#citing
+# 
+#   2. All electronic or online applications must include hyperlinks from 
+#      contexts that use CTD data to the applicable CTD data pages.
+#      Linking instructions: http://ctdbase.org/help/linking.jsp
+# 
+#   3. You must notify CTD, and describe your use of our data:
+#      http://ctdbase.org/help/contact.go
+# 
+#   4. For quality control purposes, you must provide CTD with periodic 
+#      access to your publication of our data.
+# 
+# More information: http://ctdbase.org/downloads/
+# 
+# Report created: Tue Mar 01 12:03:49 EST 2022
+#
+# Fields:
+# ChemicalName,ChemicalID,CasRN,GeneSymbol,GeneID,GeneForms,Organism,OrganismID,Interaction,InteractionActions,PubMedIDs
+#
+10074-G5,C534883,,AR,367,protein,Homo sapiens,9606,10074-G5 affects the reaction [MYC protein results in increased expression of AR protein],affects^reaction|increases^expression,32184358
+10074-G5,C534883,,AR,367,protein,Homo sapiens,9606,10074-G5 inhibits the reaction [EPHB2 protein modified form results in increased expression of AR protein],decreases^reaction|increases^expression,32184358
+10074-G5,C534883,,AR,367,protein,Homo sapiens,9606,10074-G5 results in decreased expression of AR protein,decreases^expression,32184358
+10074-G5,C534883,,AR,367,protein,Homo sapiens,9606,10074-G5 results in decreased expression of AR protein alternative form,decreases^expression,32184358
+10074-G5,C534883,,EPHB2,2048,protein,Homo sapiens,9606,10074-G5 inhibits the reaction [EPHB2 protein modified form results in increased expression of AR protein],decreases^reaction|increases^expression,32184358
+10074-G5,C534883,,EPHB2,2048,protein,Homo sapiens,9606,10074-G5 inhibits the reaction [EPHB2 protein modified form results in increased expression of MYC protein],decreases^reaction|increases^expression,32184358
+10074-G5,C534883,,MAX,4149,protein,,,10074-G5 affects the folding of and results in decreased activity of [MYC protein binds to MAX protein],affects^binding|affects^folding|decreases^activity,26474287
+10074-G5,C534883,,MAX,4149,protein,,,10074-G5 inhibits the reaction [MYC protein binds to MAX protein],affects^binding|decreases^reaction,26474287
+10074-G5,C534883,,MYC,4609,protein,Homo sapiens,9606,10074-G5 affects the reaction [MYC protein results in increased expression of AR protein],affects^reaction|increases^expression,32184358
+10074-G5,C534883,,MYC,4609,protein,Homo sapiens,9606,10074-G5 analog results in decreased expression of MYC protein,decreases^expression,26036281
+10074-G5,C534883,,MYC,4609,protein,Homo sapiens,9606,10074-G5 inhibits the reaction [EPHB2 protein modified form results in increased expression of MYC protein],decreases^reaction|increases^expression,32184358
+10074-G5,C534883,,MYC,4609,protein,Homo sapiens,9606,10074-G5 results in decreased activity of MYC protein,decreases^activity,25716159
+10074-G5,C534883,,MYC,4609,protein,Homo sapiens,9606,10074-G5 results in decreased expression of MYC protein,decreases^expression,26036281|32184358
+10074-G5,C534883,,MYC,4609,protein,,,10074-G5 affects the folding of and results in decreased activity of [MYC protein binds to MAX protein],affects^binding|affects^folding|decreases^activity,26474287
+10074-G5,C534883,,MYC,4609,protein,,,10074-G5 inhibits the reaction [MYC protein binds to MAX protein],affects^binding|decreases^reaction,26474287
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,FOS,2353,protein,Mus musculus,10090,"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone inhibits the reaction [Valproic Acid inhibits the reaction [Kainic Acid results in increased expression of FOS protein]]",decreases^reaction|increases^expression,26348896
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,KCNQ1,3784,protein,,,"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone results in decreased activity of KCNQ1 protein",decreases^activity,18568022
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,KCNQ2,3785,protein,Mus musculus,10090,"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone affects the reaction [[Potassium results in increased activity of KCNQ2 protein] which results in increased import of Thallium]",affects^reaction|increases^activity|increases^import,15634793
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,KCNQ2,3785,protein,,,"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone inhibits the reaction [[KCNQ2 protein binds to KCNQ3 protein] which results in increased transport of Thallium]",affects^binding|decreases^reaction|increases^transport,20208034
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,KCNQ3,3786,protein,,,"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone inhibits the reaction [[KCNQ2 protein binds to KCNQ3 protein] which results in increased transport of Thallium]",affects^binding|decreases^reaction|increases^transport,20208034
+"10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",C004822,35079-97-1,EPHX1,2052,gene,Homo sapiens,9606,"[EPHX1 gene SNP affects the metabolism of carbamazepine epoxide] which affects the chemical synthesis of 10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",affects^chemical synthesis|affects^metabolic processing,15692831
+"10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",C004822,35079-97-1,EPHX1,2052,protein,Homo sapiens,9606,"[EPHX1 protein results in increased metabolism of carbamazepine epoxide] which results in increased chemical synthesis of 10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",increases^chemical synthesis|increases^metabolic processing,15692831
+"10,11-dihydro-10-hydroxycarbamazepine",C039775,,ABCB1,5243,protein,Homo sapiens,9606,"ABCB1 protein results in increased transport of 10,11-dihydro-10-hydroxycarbamazepine",increases^transport,16190932
+"10,11-dihydro-10-hydroxycarbamazepine",C039775,,CYP2C19,1557,protein,,,"10,11-dihydro-10-hydroxycarbamazepine results in decreased activity of CYP2C19 protein",decreases^activity,17516704
+"10,11-dihydro-5H-dibenzo(a,d)cycloheptene",C515697,,AR,367,protein,Rattus norvegicus,10116,"10,11-dihydro-5H-dibenzo(a,d)cycloheptene analog inhibits the reaction [Metribolone binds to AR protein]",affects^binding|decreases^reaction,3695475
+"10,11-dihydro-5H-dibenzo(a,d)cycloheptene",C515697,,AR,367,protein,Rattus norvegicus,10116,"10,11-dihydro-5H-dibenzo(a,d)cycloheptene inhibits the reaction [Metribolone binds to AR protein]",affects^binding|decreases^reaction,3695475
+"10,12-octadecadienoic acid",C094849,,CASP3,836,mRNA,Oryctolagus cuniculus,9986,"[9,11-linoleic acid co-treated with 10,12-octadecadienoic acid] results in increased expression of CASP3 mRNA",affects^cotreatment|increases^expression,31923252
+"10,12-octadecadienoic acid",C094849,,PPARG,5468,mRNA,Oryctolagus cuniculus,9986,"[9,11-linoleic acid co-treated with 10,12-octadecadienoic acid] results in decreased expression of PPARG mRNA",affects^cotreatment|decreases^expression,31923252
+"10,12-octadecadienoic acid",C094849,,SCD5,79966,mRNA,Oryctolagus cuniculus,9986,"[9,11-linoleic acid co-treated with 10,12-octadecadienoic acid] results in increased expression of SCD5 mRNA",affects^cotreatment|increases^expression,31923252
+10-(2-pyrazolylethoxy)camptothecin,C534422,,CASP3,836,protein,Homo sapiens,9606,10-(2-pyrazolylethoxy)camptothecin results in increased activity of CASP3 protein,increases^activity,18708040
+10-(2-pyrazolylethoxy)camptothecin,C534422,,CASP8,841,protein,Homo sapiens,9606,10-(2-pyrazolylethoxy)camptothecin results in increased activity of CASP8 protein,increases^activity,18708040
+103D5R,C496879,,AKT1,207,protein,Homo sapiens,9606,103D5R results in decreased phosphorylation of AKT1 protein,decreases^phosphorylation,15695405
+103D5R,C496879,,HIF1A,3091,protein,Homo sapiens,9606,103D5R inhibits the reaction [cobaltous chloride results in increased expression of HIF1A protein],decreases^reaction|increases^expression,15695405
+103D5R,C496879,,HIF1A,3091,protein,Homo sapiens,9606,103D5R results in decreased expression of and results in decreased activity of HIF1A protein,decreases^activity|decreases^expression,15695405
+103D5R,C496879,,HIF1A,3091,mRNA,Homo sapiens,9606,103D5R results in decreased expression of HIF1A mRNA,decreases^expression,15695405
+103D5R,C496879,,MAPK1,5594,protein,Homo sapiens,9606,103D5R results in decreased phosphorylation of MAPK1 protein,decreases^phosphorylation,15695405
+103D5R,C496879,,MAPK3,5595,protein,Homo sapiens,9606,103D5R results in decreased phosphorylation of MAPK3 protein,decreases^phosphorylation,15695405
+103D5R,C496879,,MAPK8,5599,protein,Homo sapiens,9606,103D5R results in decreased phosphorylation of MAPK8 protein,decreases^phosphorylation,15695405
+103D5R,C496879,,SLC2A1,6513,mRNA,Homo sapiens,9606,103D5R results in decreased expression of SLC2A1 mRNA,decreases^expression,15695405
+103D5R,C496879,,VEGFA,7422,mRNA,Homo sapiens,9606,103D5R results in decreased expression of VEGFA mRNA,decreases^expression,15695405
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,GP1BA,2811,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [Tetradecanoylphorbol Acetate results in increased expression of GP1BA protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,GP1BA,2811,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [THPO protein results in increased expression of GP1BA protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,GYPA,2993,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [Tetradecanoylphorbol Acetate results in decreased expression of GYPA protein],decreases^expression|decreases^reaction,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,ITGA2B,3674,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [Tetradecanoylphorbol Acetate results in increased expression of ITGA2B protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,ITGA2B,3674,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [THPO protein results in increased expression of ITGA2B protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,ITGB3,3690,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [Tetradecanoylphorbol Acetate results in increased expression of ITGB3 protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,ITGB3,3690,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [THPO protein results in increased expression of ITGB3 protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,TFEB,7942,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine affects the localization of TFEB protein,affects^localization,28366621
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,THPO,7066,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [THPO protein results in increased expression of GP1BA protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,THPO,7066,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [THPO protein results in increased expression of ITGA2B protein],decreases^reaction|increases^expression,20523355
+10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine,C553100,,THPO,7066,protein,Homo sapiens,9606,10-(4'-(N-diethylamino)butyl)-2-chlorophenoxazine inhibits the reaction [THPO protein results in increased expression of ITGB3 protein],decreases^reaction|increases^expression,20523355
+10-(alpha-diethylaminopropionyl)phenothiazine,C013759,63834-04-8,HAMP,57817,mRNA,Homo sapiens,9606,10-(alpha-diethylaminopropionyl)phenothiazine results in decreased expression of HAMP mRNA,decreases^expression,25633564
+10-deacetylpaclitaxel,C095360,,ABCB1,5243,protein,Homo sapiens,9606,10-deacetylpaclitaxel binds to ABCB1 protein,affects^binding,29625142
+10-decarbamoylmitomycin C,C067795,26909-37-5,CASP3,836,protein,Homo sapiens,9606,10-decarbamoylmitomycin C results in increased activity of CASP3 protein,increases^activity,17530733
+10-decarbamoylmitomycin C,C067795,26909-37-5,CASP9,842,protein,Homo sapiens,9606,10-decarbamoylmitomycin C results in increased activity of CASP9 protein,increases^activity,17530733
+10-decarbamoylmitomycin C,C067795,26909-37-5,CDKN1A,1026,mRNA,Homo sapiens,9606,[10-decarbamoylmitomycin C results in increased stability of TP53 protein] which results in increased expression of CDKN1A mRNA,increases^expression|increases^stability,20536192
+10-decarbamoylmitomycin C,C067795,26909-37-5,CHEK1,1111,protein,Homo sapiens,9606,10-decarbamoylmitomycin C results in decreased expression of and results in decreased stability of CHEK1 protein,decreases^expression|decreases^stability,20536192
+10-decarbamoylmitomycin C,C067795,26909-37-5,CHEK1,1111,mRNA,Homo sapiens,9606,10-decarbamoylmitomycin C results in decreased expression of CHEK1 mRNA,decreases^expression,20536192
+10-decarbamoylmitomycin C,C067795,26909-37-5,CHEK1,1111,protein,Homo sapiens,9606,10-decarbamoylmitomycin C results in decreased expression of CHEK1 protein,decreases^expression,17530733
+10-decarbamoylmitomycin C,C067795,26909-37-5,CHEK1,1111,protein,Homo sapiens,9606,carbobenzoxy-leucyl-leucyl-norvalinal inhibits the reaction [10-decarbamoylmitomycin C results in decreased expression of CHEK1 protein],decreases^expression|decreases^reaction,20536192
+10-decarbamoylmitomycin C,C067795,26909-37-5,CHEK1,1111,protein,Homo sapiens,9606,CHEK1 protein affects the susceptibility to 10-decarbamoylmitomycin C,affects^response to substance,20536192
+10-decarbamoylmitomycin C,C067795,26909-37-5,TP53,7157,protein,Homo sapiens,9606,10-decarbamoylmitomycin C results in increased stability of TP53 protein,increases^stability,20536192
+10-decarbamoylmitomycin C,C067795,26909-37-5,TP53,7157,protein,Homo sapiens,9606,[10-decarbamoylmitomycin C results in increased stability of TP53 protein] which results in increased expression of CDKN1A mRNA,increases^expression|increases^stability,20536192
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,ACHE,43,protein,Mus musculus,10090,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide results in decreased activity of ACHE protein,decreases^activity,15525694
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,ACTA1,58,protein,Bos taurus,9913,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to ACTA1 protein,affects^binding,19539807
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,ALB,213,protein,Mus musculus,10090,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to ALB protein,affects^binding,15525694
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,ATP5B,11947,protein,Mus musculus,10090,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to ATP5B protein,affects^binding,19539807
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,AZGP1,563,protein,Homo sapiens,9606,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to AZGP1 protein,affects^binding,19539807
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,BCHE,590,protein,Mus musculus,10090,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide results in decreased activity of BCHE protein,decreases^activity,15525694
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,CES1C,13884,protein,Mus musculus,10090,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to CES1C protein,affects^binding,15525694
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,CTRB2,440387,protein,Bos taurus,9913,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to CTRB2 protein,affects^binding,19539807
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,KIF3C,3797,protein,Homo sapiens,9606,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to KIF3C protein,affects^binding,19539807
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,KRT1,3848,protein,Homo sapiens,9606,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to KRT1 protein,affects^binding,19539807
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,SLC25A4,291,protein,Mus musculus,10090,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to SLC25A4 protein,affects^binding,19539807
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,TF,7018,protein,Homo sapiens,9606,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to TF protein,affects^binding,18930948
+10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide,C403065,,TRF,22041,protein,Mus musculus,10090,10-(fluoroethoxyphosphinyl)-N-(biotinamidopentyl)decanamide binds to TRF protein,affects^binding,18930948
+10-formyltetrahydropteroylglutamic acid,C010161,2800-34-2,ALDH1L2,160428,protein,Homo sapiens,9606,ALDH1L2 protein results in increased metabolism of 10-formyltetrahydropteroylglutamic acid,increases^metabolic processing,21238436
+"10H-3,6-diazaphenothiazine",C000627785,,CASP2,835,protein,Rattus norvegicus,10116,"10H-3,6-diazaphenothiazine results in increased activity of CASP2 protein",increases^activity,32619082
+"10H-3,6-diazaphenothiazine",C000627785,,CASP6,839,protein,Rattus norvegicus,10116,"10H-3,6-diazaphenothiazine results in increased activity of CASP6 protein",increases^activity,32619082
+"10H-3,6-diazaphenothiazine",C000627785,,CASP8,841,protein,Rattus norvegicus,10116,"10H-3,6-diazaphenothiazine results in increased activity of CASP8 protein",increases^activity,32619082
+"10H-3,6-diazaphenothiazine",C000627785,,CASP9,842,protein,Rattus norvegicus,10116,"10H-3,6-diazaphenothiazine results in increased activity of CASP9 protein",increases^activity,32619082
+10-hydroxycamptothecin,C028098,67656-30-8,BCL2,596,protein,Homo sapiens,9606,BCL2 protein affects the susceptibility to 10-hydroxycamptothecin,affects^response to substance,16603448
+10-hydroxycamptothecin,C028098,67656-30-8,BCL2L1,598,protein,Homo sapiens,9606,BCL2L1 protein affects the susceptibility to 10-hydroxycamptothecin,affects^response to substance,17033717
+10-hydroxycamptothecin,C028098,67656-30-8,CASP3,836,protein,Homo sapiens,9606,[10-hydroxycamptothecin co-treated with Fluorouracil co-treated with Leucovorin] results in increased activity of CASP3 protein,affects^cotreatment|increases^activity,12934351
+10-hydroxycamptothecin,C028098,67656-30-8,DDIT3,1649,mRNA,Cricetinae,10026,10-hydroxycamptothecin results in increased expression of DDIT3 mRNA,increases^expression,19013231
+10-hydroxycamptothecin,C028098,67656-30-8,MDM2,4193,protein,Homo sapiens,9606,MDM2 protein affects the susceptibility to 10-hydroxycamptothecin,affects^response to substance,13130078
+10-hydroxynortriptyline,C013567,1156-99-6,CYP2D6,1565,gene,Homo sapiens,9606,CYP2D6 gene mutant form results in increased abundance of 10-hydroxynortriptyline,increases^abundance,11673748
+10-hydroxynortriptyline,C013567,1156-99-6,CYP2D6,1565,gene,Homo sapiens,9606,Paroxetine inhibits the reaction [CYP2D6 gene mutant form results in increased abundance of 10-hydroxynortriptyline],decreases^reaction|increases^abundance,11673748
+10-hydroxynortriptyline,C013567,1156-99-6,CYP2D6,1565,,,,CYP2D6 affects the chemical synthesis of 10-hydroxynortriptyline,affects^chemical synthesis,18359183
+10-hydroxywarfarin,C065719,83219-99-2,CYP2C9,1559,protein,Homo sapiens,9606,10-hydroxywarfarin binds to and results in decreased activity of CYP2C9 protein,affects^binding|decreases^activity,20429590
+10-hydroxywarfarin,C065719,83219-99-2,CYP2C9,1559,mRNA,Homo sapiens,9606,[10-hydroxywarfarin binds to and results in increased activity of NR1I2 protein] which results in increased expression of CYP2C9 mRNA,affects^binding|increases^activity|increases^expression,20735727
+10-hydroxywarfarin,C065719,83219-99-2,CYP2C9,1559,protein,Homo sapiens,9606,10-hydroxywarfarin inhibits the reaction [[CYP2C9 protein results in increased hydroxylation of Warfarin] which results in increased chemical synthesis of 7-hydroxywarfarin],decreases^reaction|increases^chemical synthesis|increases^hydroxylation,20429590
+10-hydroxywarfarin,C065719,83219-99-2,CYP2C9,1559,gene,Homo sapiens,9606,[CYP2C9 gene polymorphism affects the metabolism of Warfarin] which affects the abundance of 10-hydroxywarfarin,affects^abundance|affects^metabolic processing,27539372
+10-hydroxywarfarin,C065719,83219-99-2,CYP3A4,1576,mRNA,Homo sapiens,9606,[10-hydroxywarfarin binds to and results in increased activity of NR1I2 protein] which results in increased expression of CYP3A4 mRNA,affects^binding|increases^activity|increases^expression,20735727
+10-hydroxywarfarin,C065719,83219-99-2,CYP3A4,1576,protein,Homo sapiens,9606,CYP3A4 protein affects the chemical synthesis of 10-hydroxywarfarin,affects^chemical synthesis,16035367
+10-hydroxywarfarin,C065719,83219-99-2,CYP3A4,1576,protein,,,CYP3A4 protein results in increased chemical synthesis of 10-hydroxywarfarin,increases^chemical synthesis,20429590
+10-hydroxywarfarin,C065719,83219-99-2,NR1I2,8856,protein,Homo sapiens,9606,10-hydroxywarfarin binds to and results in increased activity of NR1I2 protein,affects^binding|increases^activity,20735727
+10-hydroxywarfarin,C065719,83219-99-2,NR1I2,8856,protein,Homo sapiens,9606,[10-hydroxywarfarin binds to and results in increased activity of NR1I2 protein] which results in increased expression of CYP2C9 mRNA,affects^binding|increases^activity|increases^expression,20735727
+10-hydroxywarfarin,C065719,83219-99-2,NR1I2,8856,protein,Homo sapiens,9606,[10-hydroxywarfarin binds to and results in increased activity of NR1I2 protein] which results in increased expression of CYP3A4 mRNA,affects^binding|increases^activity|increases^expression,20735727
+10-hydroxywarfarin,C065719,83219-99-2,UGT2B7,7364,protein,Homo sapiens,9606,10-hydroxywarfarin binds to and results in decreased activity of UGT2B7 protein,affects^binding|decreases^activity,25393417

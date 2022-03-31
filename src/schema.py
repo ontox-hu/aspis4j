@@ -52,7 +52,7 @@ class CreateGene(graphene.Mutation):
     class Arguments:
         GeneID = graphene.String(required=True)
         GeneSymbol = graphene.String(required=True)
-        GeneName = graphene.String(required=True)
+        GeneName = graphene.String(required=False)
         Synonyms = graphene.String(required=False)
         BioGRIDIDs = graphene.String(required=False)
         PharmGKBIDs = graphene.String(required=False)
