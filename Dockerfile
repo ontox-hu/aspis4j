@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update -y && apt-get upgrade
+RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install -y python3.8 python3-pip
 
 COPY ./requirements.txt /requirements.txt

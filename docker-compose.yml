@@ -1,0 +1,46 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  neo4j:
+    image: neo4j
+    ports:
+      - "7687:7687"
+      - "7474:7474"
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+    environment: 
+      - NEO4J_AUTH=neo4j/adminpw
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7474"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+  
+  ontox4j:
+    build: .
+    depends_on:
+      - neo4j
+    restart: on-failure
+    environment: 
+      - BIND_HOST=127.0.0.1
+      - BIND_PORT=5000
+      - NEO4J_HOST="neo4j"
+      - NEO4J_PORT="7687"
+      - NEO4J_USER="neo4j"
+      - NEO4J_PASSWORD="adminpw"
+    ports: 
+      - "5000:5000"
+
+volumes:
+  neo4j-data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /data/ontox4j/data
+  neo4j-logs:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /data/ontox4j/logs
