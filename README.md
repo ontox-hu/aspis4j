@@ -2,11 +2,12 @@
 
 ## Documentation
 
-src/
-* **app.py** runs the Flask app with GraphiQL for browser
-* **settings.py** env for Flask and Neo4j (ask for vars.sh)
-* **neo4j_store.py**: Neo4j node/edge CRUD
-* **schema.py**: Graphene GraphQL schema
+* **docs/** - Wiki style documentation  
+* **src/**
+   * **app.py** - runs the Flask app with GraphiQL for browser
+   * **settings.py** - env for Flask and Neo4j (ask for vars.sh)
+   * **neo4j_store.py** - Neo4j node/edge CRUD
+   * **schema.py** - Graphene GraphQL schema
 
 ## Dev
 ```diff
