@@ -12,7 +12,6 @@ print(NEO4J_HOST)
 print(NEO4J_USER)
 print(NEO4J_PASSWORD)
 
-
 graph = Graph( 
     host     = NEO4J_HOST,
     port     = NEO4J_PORT,
