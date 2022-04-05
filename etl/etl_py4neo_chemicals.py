@@ -6,12 +6,12 @@ import numpy as np
 import json
 import time
 from py2neo.ogm import Graph, Node, GraphObject, Property, RelatedTo
+from settings import NEO4J_HOST,NEO4J_PASSWORD,NEO4J_PORT,NEO4J_USER
 
+print(NEO4J_HOST)
+print(NEO4J_USER)
+print(NEO4J_PASSWORD)
 
-NEO4J_HOST     = "c61a7d98.databases.neo4j.io"
-NEO4J_PORT     = "7687"
-NEO4J_USER     = "neo4j"
-NEO4J_PASSWORD = "yY6Zqq_j2Y_6UjtGXidKjD_DjQUP1FQ04DEfWabB3j4"
 
 graph = Graph( 
     host     = NEO4J_HOST,
@@ -20,6 +20,13 @@ graph = Graph(
     password = NEO4J_PASSWORD,
     scheme   = "neo4j+s"
 )
+
+try:
+    graph.run("MATCH () RETURN 1 LIMIT 1")
+    print('Connection to Neo4j DB succesfull')
+except Exception:
+    print('No connection to Neo4j DB')
+    quit()
 
 df = pd.read_csv('./CTDChemicals003.csv', skiprows=27)
 df.rename(columns = {'# ChemicalName':'ChemicalName'}, inplace = True)
