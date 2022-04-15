@@ -1,4 +1,4 @@
-# Neo4j-Mirgations
+# Neo4j-Migrations
 
 ## Installation
 
