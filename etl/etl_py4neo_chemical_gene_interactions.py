@@ -14,19 +14,30 @@ graph = Graph(
     port     = NEO4J_PORT,
     user     = NEO4J_USER,
     password = NEO4J_PASSWORD,
-    scheme   = "neo4j+s"
+    scheme   = "neo4j"
 )
+
+try:
+    graph.run("MATCH () RETURN 1 LIMIT 1")
+    print('Connection to Neo4j DB succesfull')
+except Exception:
+    print('No connection to Neo4j DB')
+    quit()
+
 matcher = NodeMatcher(graph)
 
 df = pd.read_csv('./etl/CTDChemicalGeneInteractionsAll.csv', skiprows=27)
 df.rename(columns = {'# ChemicalName':'ChemicalName'}, inplace = True)
 df.drop([0], inplace = True)
 NumItems = len(df.index)
+LowIndex = 10000
+HighIndex = NumItems
+CommitQueries = 300
 
 tx = graph.begin()
 
 tic = time.perf_counter()
-for i in range(NumItems):
+for i in range(LowIndex, HighIndex):
 
     ChemicalID = df.iloc[i, 1]
     chemical = matcher.match("Chemical", ChemicalID=ChemicalID).first()
@@ -67,7 +78,7 @@ for i in range(NumItems):
             InteractionDetail=InteractionDetail, PubMedIDs=PubMedIDs)
         tx.create(ChemGeneInteraciton)
 
-    if i%10==0:
+    if i%CommitQueries==0:
         graph.commit(tx)
         tx = graph.begin()
         toc = time.perf_counter()
