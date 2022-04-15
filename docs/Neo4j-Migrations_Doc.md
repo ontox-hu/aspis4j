@@ -24,6 +24,8 @@ This command will create a project Neo4j-Migrations project with a configuration
 neo4j-migrations init
 ```
 
+## Apply initial migration
+
 To test Neo4j-Migrations create a sample Cypher files in the `./neo4j/migrations` folder named `V0_0_1__ASPIS4J_Migration.cypher` with the following code
 
 ```sql
@@ -39,6 +41,7 @@ RETURN n
 Check if Neo4-Migrations is reading connecting to Neo4j DB
 
 ```sh
+source vars.sh
 neo4j-migrations --password:env NEO4J_PASSWORD info mode=REMOTE
 ```
 The output should be like this
@@ -107,6 +110,8 @@ Database: neo4j
 Now the Neo4j DB should have the chain of migrations like this:
 
 ![Migrations Chain](./img/MigrationsChain.png "Migrations Chain").
+
+## Apply second migration
 
 Now create a second migration to remove staff from first migration. Create a file `V0_0_2__Remove_agents.cypher`  in `./neo4j/migrations` folder with the following code:
 
