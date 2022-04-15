@@ -2,6 +2,7 @@
 vars.sh
 vars.py
 .DS_Store
+etl/CTDChemicalsDiseases.csv
 etl/CTDChemicalGeneInteractionsAll.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
