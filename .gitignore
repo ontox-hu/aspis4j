@@ -130,3 +130,4 @@ cython_debug/
 #.idea/
 .Rproj.user
 aspis4j.Rproj
+etl/*.csv
