@@ -27,5 +27,9 @@ except Exception:
     print('No connection to Neo4j DB')
     quit()
 
+Result = graph.run("MATCH (n:Chemical) RETURN count(n)").data()
+print(str(Result[0].get("count(n)")) + " Chemicals")
+Result = graph.run("MATCH (n:Gene) RETURN count(n)").data()
+print(str(Result[0].get("count(n)")) + " Genes")
 Result = graph.run("MATCH (n) RETURN count(n)").data()
-print(Result)
+print(str(Result[0].get("count(n)")) + " Total items")

@@ -30,9 +30,9 @@ df = pd.read_csv('./etl/CTDChemicalGeneInteractionsAll.csv', skiprows=27)
 df.rename(columns = {'# ChemicalName':'ChemicalName'}, inplace = True)
 df.drop([0], inplace = True)
 NumItems = len(df.index)
-LowIndex = 10000
+LowIndex = 0
 HighIndex = NumItems
-CommitQueries = 300
+CommitQueries = 1000
 
 tx = graph.begin()
 

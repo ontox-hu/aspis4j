@@ -18,7 +18,7 @@ graph = Graph(
     port     = NEO4J_PORT,
     user     = NEO4J_USER,
     password = NEO4J_PASSWORD,
-    scheme   = "neo4j+s"
+    scheme   = "neo4j"
 )
 
 try:
@@ -28,7 +28,7 @@ except Exception:
     print('No connection to Neo4j DB')
     quit()
 
-df = pd.read_csv('./CTDChemicals003.csv', skiprows=27)
+df = pd.read_csv('./etl/CTDChemicalsAll.csv', skiprows=27)
 df.rename(columns = {'# ChemicalName':'ChemicalName'}, inplace = True)
 df.drop([0], inplace = True)
 NumItems = len(df.index)
