@@ -90,28 +90,67 @@ class Gene(BaseModel):
             'UniprotIDs': self.UniprotIDs
         }
 
-class Protein(BaseModel):
-    __primarykey__ = 'uniprot'
+class Disease(BaseModel):
+    """
+    Disease Class using CTD Model with properties DiseaseID, 
+    DiseaseName, Definition and AltDiseaseIDs
+    """
 
-class Compound(BaseModel):
-    #__primarykey__  = 'id'
-    #id = Property()
-    pubchem_cid = Property()
-    name = Property()
-    # compounds have lots of properties, do we have to define them all up front?
-    # maybe just passing a reference to pubchem is enough?
+    __primarykey__  = 'DiseaseID'
+    DiseaseID = Property()    # MeSH or OMIM identifier
+    DiseaseName = Property()  
+    Definition = Property()   
+    # TODO: Delimited lists currently in a single string should be replaced by a list structure
+    AltDiseaseIDs = Property()  # alternative identifiers; '|'-delimited list  
+    Synonyms = Property()    # '|'-delimited list  
+    SlimMappings = Property()  # '|'-delimited list  
 
-    metabolizes  = RelatedTo('Protein',"metabolizes") 
-    translocates = RelatedTo('Protein',"translocates")
-    is_converted = RelatedTo('Compound','is_converted_to')
-    translocated_from = RelatedTo('Compound','translocated_from')
-
-    def fetch(self, _id):
-        return self.match(graph, _id).first()
+    def fetch(self, DiseaseID):
+        return self.match(graph, DiseaseID).first()
 
     def as_dict(self):
         return {
-            'id': self.__primaryvalue__,
-            'pubchem_cid': self.pubchem_cid,
-            'name': self.name
+            'DiseaseID': self.DiseaseID,
+            'DiseaseName': self.DiseaseName,
+            'Definition': self.Definition,
+            'AltDiseaseIDs': self.AltDiseaseIDs,
+            'Synonyms': self.Synonyms,
+            'SlimMappings': self.SlimMappings
         }
+
+class Pathway(BaseModel):
+    """
+    Pathway Class using CTD Model with properties PathwayID and PathwayName
+    """
+
+    __primarykey__  = 'PathwayID'
+    PathwayID = Property()    # MeSH or OMIM identifier
+    PathwayName = Property()  
+
+    def fetch(self, PathwayID):
+        return self.match(graph, PathwayID).first()
+
+    def as_dict(self):
+        return {
+            'PathwayID': self.PathwayID,
+            'PathwayName': self.PathwayName
+        }
+
+
+class Collection(BaseModel):
+    """
+    Disease Class using CTD Model with properties GeneID, 
+    GeneSymbol, GeneName and Alternative IDs
+    """
+
+    __primarykey__  = 'CollectionID'
+    CollectionID = Property()
+
+    def fetch(self, Collection):
+        return self.match(graph, Collection).first()
+    
+    def as_dict(self):
+            return {
+            'CollectionID': self.CollectionID
+        }
+    
