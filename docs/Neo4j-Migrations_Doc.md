@@ -18,7 +18,7 @@ sdk install neo4jmigrations
 
 ## Init Neo4j-Migrations in current directory
 
-This command will create a project Neo4j-Migrations project with a configuration file named `.migrations.properties` and a folder to store cypher migration scripts `./neo4j/migrations`
+Following command will create a project Neo4j-Migrations project with a configuration file named `.migrations.properties` and a folder to store cypher migration scripts `./neo4j/migrations`
 
 ```sh
 neo4j-migrations init

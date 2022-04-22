@@ -15,5 +15,6 @@ COPY . /
 
 EXPOSE 7687
 EXPOSE 7474
+EXPOSE 7473
 
 CMD service neo4j restart && tail -F /var/log/neo4j/neo4j.log
