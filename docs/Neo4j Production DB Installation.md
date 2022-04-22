@@ -67,6 +67,12 @@ Add following lines to `/etc/neo4j/neo4j.conf`
 dbms.security.procedures.unrestricted=apoc.*
 ```
 
+Create a file `/etc/neo4j/apoc.conf` with the following line
+```sh
+apoc.import.file.enabled=true
+```
+
+
 Restart Neo4j service
 ```sh
 service neo4j restart
@@ -102,3 +108,29 @@ Follow the Neo4j Migrations Doc and change the address in `.migrations.propertie
 ```sh
 address=bolt+s\://aspis4j.com\:7687
 ```
+
+ # ETL CTD 
+
+The file `ETL_CTD.sh` download the file from CTD, decrompess and remove the first 29 lines of header.
+
+```sh
+sudo ./ETL_CTD.sh
+```
+
+Perform Neo4j Migrations
+
+Nodes
+     175100 CTD_chemicals.csv
+     564848 CTD_genes.csv
+      13178 CTD_diseases.csv
+       2567 CTD_pathways.csv
+
+Realtionships
+     135783 CTD_genes_pathways.csv
+     599734 CTD_diseases_pathways.csv 294s
+    2346085 CTD_chem_gene_ixns.csv 
+            313829 14:39
+    7854278 CTD_chemicals_diseases.csv
+   94153736 CTD_genes_diseases.csv
+
+

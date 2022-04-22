@@ -1,9 +1,10 @@
 // assert that edition is community
 // assert that version is ge 4.4
 CALL apoc.periodic.iterate("
-  CALL apoc.load.csv('file:///CTD_chem_gene_ixns_All.csv') 
+  CALL apoc.load.csv('file:///CTD_chem_gene_ixns.csv') 
   YIELD list AS line 
-  RETURN line",
+  RETURN line
+  ",
   "MATCH (c:Chemical {ChemicalID: line[1]})
   MATCH (g:Gene {GeneID: toInteger(line[4])})
   UNWIND split(line[9], '|') AS Interaction
@@ -15,6 +16,7 @@ CALL apoc.periodic.iterate("
       PubMedIDs: line[10]
       }, g)
   YIELD rel
-  RETURN count(rel)",
-  {batchSize:1000, parallel:true}
+  RETURN count(rel)
+  ",
+  {batchSize:1000, parallel:true})
       
