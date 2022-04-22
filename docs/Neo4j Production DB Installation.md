@@ -131,6 +131,8 @@ Realtionships
     2346085 CTD_chem_gene_ixns.csv 
             313829 14:39
             346550 14:53
+            424550 15:12
+            737800 16:42
     7854278 CTD_chemicals_diseases.csv
    94153736 CTD_genes_diseases.csv
 
