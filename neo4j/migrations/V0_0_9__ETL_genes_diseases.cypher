@@ -4,7 +4,7 @@ CALL apoc.periodic.iterate(
   "CALL apoc.load.csv('file:///CTD_genes_diseases.csv') 
   YIELD list AS line 
   RETURN line",
-  "MATCH (g:Gene {GeneID: line[1]})
+  "MATCH (g:Gene {GeneID: toInteger(line[1])})
   MATCH (d:Disease {DiseaseID: line[3]})
   CALL apoc.create.relationship(g, 'ASSOCIATED_WITH', {
       DirectEvidence: line[4],

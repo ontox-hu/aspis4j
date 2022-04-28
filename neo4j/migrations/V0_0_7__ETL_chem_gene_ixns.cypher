@@ -18,5 +18,5 @@ CALL apoc.periodic.iterate("
   YIELD rel
   RETURN count(rel)
   ",
-  {batchSize:1000, parallel:true})
+  {batchSize:1000, concurrency:28, parallel:true})
       
