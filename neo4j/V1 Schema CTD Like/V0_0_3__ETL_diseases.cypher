@@ -1,9 +1,9 @@
 // assert that edition is community
 // assert that version is ge 4.4
-LOAD CSV FROM 'file:///CTD_diseases_2000.csv' AS line
+LOAD CSV FROM 'file:///CTD_diseases.csv' AS line
 CALL {
   WITH line
-  CREATE (d:Disease:Variable {
+  CREATE (d:Disease {
     DiseaseID: line[1],
     DiseaseName: line[0], 
     Definition: line[2], 

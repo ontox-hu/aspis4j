@@ -40,10 +40,10 @@ Example query to read an entity:
 
 ```graphql
 {
-  compound(Id: "3") {
-    id
-    pubchemCid
-    name
+  chemical(ChemicalID: "D000658") {
+    CasRN
+    ChemicalID
+    ChemicalName
   }
 }
 ```
@@ -52,9 +52,9 @@ Example query to write an entity:
 
 ```graphql
 mutation {
-  createCompound(name: "Amoxaciline", pubchemCid: "313233") {
-    compound {
-      name, pubchemCid
+  createChemical(ChemicalName: "Amoxicillin", ChemicalID: "D000658") {
+    chemical {
+      ChemicalName, ChemicalID
     },
     success
   }

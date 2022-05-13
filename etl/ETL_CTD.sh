@@ -12,6 +12,14 @@ sudo wget http://ctdbase.org/reports/CTD_genes_diseases.csv.gz
 sudo gzip -d *.gz
 for file in *
 do
-    tail -n +30 $file > temp.csv 
+    tail -n +29 $file > temp.csv 
     mv temp.csv $file
+done
+for file in *
+do
+    filename=$(basename -- "$file")
+    extension="${filename##*.}"
+    filename="${filename%.*}"
+    tail -n -2001 $file > temp.csv 
+    mv temp.csv "${filename}_2000.csv"
 done

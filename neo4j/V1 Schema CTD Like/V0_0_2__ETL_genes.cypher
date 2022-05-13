@@ -1,9 +1,9 @@
 // assert that edition is community
 // assert that version is ge 4.4
-LOAD CSV FROM 'file:///CTD_genes_2000.csv' AS line
+LOAD CSV FROM 'file:///CTD_genes.csv' AS line
 CALL {
   WITH line
-  CREATE (g:Gene:Variable {
+  CREATE (g:Gene {
     GeneID: toInteger(line[2]), 
     GeneName: line[1], 
     GeneSymbol: line[0],
