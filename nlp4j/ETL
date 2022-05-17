@@ -1,0 +1,14 @@
+// Add important ETL cypher code here for reproducibility reasons
+
+// get all unique chemical nmes 
+MATCH (c:Chemical) RETURN DISTINCT c.ChemicalName
+
+//
+get count and all chemnames
+MATCH (c:Chemical)
+WITH c.ChemicalName as chemName
+ORDER BY chemName
+WITH collect(chemName) AS chemNames		// <== usernames is now a list :p
+RETURN size(chemNames) AS chemCount, chemNames[0..25] as chemNames
+
+// current results (date: 14 May 2022 --> 2001
