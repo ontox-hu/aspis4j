@@ -1,4 +1,4 @@
-# Ontox4j
+# Ontox4J - A graph database for toxicology
 
 ## Documentation
 
